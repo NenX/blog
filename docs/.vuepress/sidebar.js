@@ -22,6 +22,13 @@ module.exports = {
       children: [
         ['webpack/fundamental', '基础']
       ]
+    },
+    {
+      collapsable: false,
+      title: 'nodejs',
+      children: [
+        ['nodejs/调试', '调试']
+      ]
     }
 
   ],
