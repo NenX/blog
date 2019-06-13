@@ -11,7 +11,9 @@ module.exports = {
       collapsable: false,
       title: 'cpp',
       children: [
-        ['cpp/a', 'a']
+        ['cpp/a', 'a'],
+        ['cpp/库函数知识', '库函数知识'],
+
       ]
     },
     {

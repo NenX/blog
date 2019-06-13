@@ -94,3 +94,16 @@ ls -l中显示的内容如下：
 - vi /etc/passwd，查看linux中所有用户信息，可以看可以编辑
 
 - cat /etc/passwd，查看linux中所有用户信息，只可以看不可以编辑
+
+### 常见命令
+
+- man
+- 链接：ln -s 源文件路径 目标路径
+- tar：
+  - 打包：tar -cvf xxx.tar 目标路径
+  - 解包：tar -xvf xxx.tar [-C 指定路径]
+- gzip
+  - 压缩：gzip xxx.tar
+  - 解压：gzip -d xxx.tar.gz
+- 打包+压缩：tar -czvf[-cjvf] xxx.tar.gz[xxx.tar.bz2] 所需文件 
+- 解压+解包：tar -xzvf[-xjvf] xxx.tar.gz[xxx.tar.bz2] 所需文件 
