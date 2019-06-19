@@ -7,6 +7,7 @@ module.exports = {
     lastUpdated: 'Last Updated',
     nav: [
       { text: 'learning', link: '/learning/' },
+      { text: '前端', link: '/fe/' },
       { text: 'about', link: '/about' },
       { text: 'External', link: 'https://google.com' },
     ],
