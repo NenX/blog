@@ -1,3 +1,4 @@
+#! /usr/bin/code
 # blog
 ---
 home: true

@@ -139,3 +139,4 @@ ls -l中显示的内容如下：
     - 软链接：ln -s 源文件路径 目标路径
 - sort 排序，sort [file]
 - grep：搜索数据，grep [options] pattern [file] 
+- Shebang (Hashbang) 是指 <code>#!</code> 开头的序列， 在文件中存在 Shebang 的情况下，类 Unix 操作系统的程序加载器会分析 Shebang 后的内容，将这些内容作为解释器指令，并调用该指令，并将载有 Shebang 的文件路径作为该解释器的参数[1]。例如，以指令 <code>#!/bin/sh</code> 开头的文件在执行时会实际调用 <code>/bin/sh</code> 程序

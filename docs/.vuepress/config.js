@@ -12,5 +12,8 @@ module.exports = {
       { text: 'External', link: 'https://google.com' },
     ],
     sidebar
+  },
+  markdown: {
+    lineNumbers: true
   }
 }
