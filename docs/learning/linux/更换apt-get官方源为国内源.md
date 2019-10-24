@@ -1,3 +1,4 @@
+## 更换下载源
 1. 备份
 ```bash
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
@@ -22,3 +23,26 @@ Debian 9（stretch） — 旧的稳定版（oldstable）
 
 Debian 8（jessie） — 更旧的稳定版（oldoldstable）
 :::
+
+## nodejs 下载
+1. 安装
+```bash
+sudo apt install nodejs
+```
+2. 验证
+```bash
+node -v
+```
+
+## n 下载
+1. 安装
+```bash
+sudo npm i n -g
+```
+:::tip
+可能要下载curl: <code>sudo apt install curl</code>
+:::
+2. 安装稳定版 node：
+```bash
+sudo n stable
+```
