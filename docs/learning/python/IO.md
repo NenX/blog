@@ -34,8 +34,12 @@ fs = open('C:\Users\lianmed\Desktop\text.txt','r',encoding='gbk')
 
 ## 写文件
 
-调用 `write` 或 `writelines` 写入文件
+调用 `write` 或 `writelines` 写入文件，如果路径不存在抛出一个 `IOError`，如果文件不存在即新增文件。
 ```py
+
+# wb 写入二进制
+fs = open('./test.txt','wb)
+
 # w 模式会清空原先的内容
 fs = open('./test.txt','w)
 

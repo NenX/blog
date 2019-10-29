@@ -1,7 +1,7 @@
-var sidebar  = require('./sidebar')
+var sidebar = require('./sidebar')
 module.exports = {
-  base:'/blog/',
-  title: 'Hello VuePress',
+  base: '/blog/',
+  title: 'My Blog',
   description: 'Just playing around',
   themeConfig: {
     lastUpdated: 'Last Updated',
