@@ -1,8 +1,8 @@
 var sidebar = require('./sidebar')
 module.exports = {
   base: '/blog/',
-  title: 'My Blog',
-  description: 'Just playing around',
+  title: '无味咸鱼',
+  description: 'Python linux c++ nodejs git 前端',
   themeConfig: {
     lastUpdated: 'Last Updated',
     nav: [
@@ -14,6 +14,6 @@ module.exports = {
     sidebar
   },
   markdown: {
-    lineNumbers: true
+    // lineNumbers: true
   }
 }

@@ -26,8 +26,6 @@ rootDirs.forEach(d => {
     })
     result[`/${d}/`].push(obj)
   })
-  console.log(JSON.stringify(result,null,2))
-  
 })
 
 
