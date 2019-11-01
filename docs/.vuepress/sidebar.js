@@ -1,54 +1,42 @@
-var fs = require('fs')
-var path = require('path')
-var rootPath = path.resolve(__dirname,'..')
-var rootDirs = fs.readdirSync(rootPath)
-var result = {}
-rootDirs.forEach(d => {
-  if(d.startsWith('.'))return
-  var modulePath = path.resolve(rootPath,d)
-  if(fs.statSync(modulePath).isFile()) return
-  result[`/${d}/`] = []
+const fs = require('fs')
+const path = require('path')
+const rootPath = path.resolve(__dirname, '..')
 
-  var moduleDirs = fs.readdirSync(modulePath)
-  moduleDirs.forEach(m => {
-    var obj =     {
-      title: m,
-      collapsable: true,
-      children: [
-      ]
-    }
-    var subPath = path.resolve(modulePath,m)
-    if(fs.statSync(subPath).isFile()) return
-    var files = fs.readdirSync(subPath)
-    files.forEach(_ => {
-      var name = _.slice(0,_.indexOf('.'))
-      obj.children.push([m+'/'+name, name])
+const sidebar = {}
+const nav = []
+
+
+fs.readdirSync(rootPath)
+  .filter(_ => !_.startsWith('.'))
+  .map(_ => [_, path.resolve(rootPath, _)])
+  .filter(_ => fs.statSync(_[1]).isDirectory())
+  .forEach(([text, absPath]) => {
+    const link = `/${text}/`
+    nav.push({ text, link })
+    sidebar[link] = []
+    const subDirs =
+      fs.readdirSync(absPath)
+        .map(_ => [_, path.resolve(absPath, _)])
+        .filter(_ => fs.statSync(_[1]).isDirectory());
+
+    subDirs.forEach(([subName, absSubPath]) => {
+      const obj = {
+        title: subName,
+        collapsable: true,
+        children: []
+      }
+
+      const files = fs.readdirSync(absSubPath)
+      files.forEach(_ => {
+        const mdName = _.slice(0, _.indexOf('.'))
+        obj.children.push([subName + '/' + mdName, mdName])
+      })
+      sidebar[link].push(obj)
     })
-    result[`/${d}/`].push(obj)
   })
-})
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-module.exports = result
+module.exports = { sidebar, nav }
 
 a = {
   '/fe/': [
