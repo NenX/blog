@@ -42,7 +42,7 @@
 
 ### 文件权限
 ls -l中显示的内容如下：
-```shell(2)
+```shell {2}
 -rwxr-xr-x 1 root root   43080 Jul 21  2018 systemd-sysusers
 ```
 前十个字符确定不同用户对文件的权限

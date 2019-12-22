@@ -25,7 +25,6 @@ rootDirs.forEach(d => {
       var name = _.slice(0, _.indexOf('.'))
       obj.children.push([m + '/' + name, name])
     })
-    result[`/${d}/`].push(obj)
   })
   console.log(JSON.stringify(result, null, 2))
 
@@ -51,7 +50,7 @@ rootDirs.forEach(d => {
 
 
 
-module.exports = result
+module.exports = { sidebar, nav }
 
 a = {
   '/fe/': [
