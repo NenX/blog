@@ -2,52 +2,40 @@ var fs = require('fs')
 var path = require('path')
 var rootPath = path.resolve(__dirname, '..')
 var rootDirs = fs.readdirSync(rootPath)
-var result = {}
-rootDirs.forEach(d => {
-  if (d.startsWith('.')) return
-  var modulePath = path.resolve(rootPath, d)
-  if (fs.statSync(modulePath).isFile()) return
-  result[`/${d}/`] = []
+var sidebar = {}
+const nav = []
+rootDirs.forEach(navText => {
+  if (navText.startsWith('.')) return
+  var absNavPath = path.resolve(rootPath, navText)
+  if (fs.statSync(absNavPath).isFile()) return
+  const navLink = `/${navText}/`
+  sidebar[navLink] = []
+  nav.push({ text: navText, link: navLink })
+  var moduleDirs = fs.readdirSync(absNavPath)
 
-  var moduleDirs = fs.readdirSync(modulePath)
   moduleDirs.forEach(m => {
+    
     var obj = {
       title: m,
       collapsable: true,
       children: [
       ]
     }
-    var subPath = path.resolve(modulePath, m)
+    sidebar[navLink].push(obj)
+    var subPath = path.resolve(absNavPath, m)
     if (fs.statSync(subPath).isFile()) return
     var files = fs.readdirSync(subPath)
+
     files.forEach(_ => {
       if (fs.statSync(path.resolve(subPath, _)).isDirectory()) return
       var name = _.slice(0, _.indexOf('.'))
       obj.children.push([m + '/' + name, name])
     })
+    console.log(obj)
+
   })
-  console.log(JSON.stringify(result, null, 2))
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 module.exports = { sidebar, nav }
