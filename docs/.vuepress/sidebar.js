@@ -31,7 +31,7 @@ rootDirs.forEach(navText => {
       var name = _.slice(0, _.indexOf('.'))
       obj.children.push([m + '/' + name, name])
     })
-    console.log(obj)
+    // console.log(obj)
 
   })
 
