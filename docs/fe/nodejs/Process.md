@@ -180,3 +180,50 @@ spawn('npm', {
   shell: process.platform === 'win32'
 });
 ```
+
+### 通过child.unref()让父进程退出
+```js
+// parent.js
+const c = require('child_process')
+let t = 0
+const cc = c.spawn('node', ['child.js'], {
+    detached: true,
+    stdio: 'ignore' // 这里
+})
+cc.unref() // 这里
+setInterval(() => {
+    console.log('parent', process.pid)
+}, 1000);
+```
+```js
+// child.js
+const c = require('child_process')
+const fs = require('fs')
+const path = require('path')
+let t = 0
+setInterval(() => {
+
+    if (t++ > 10) {
+        process.kill(0)
+    }
+    if (t > 3) {
+        c.spawn('taskkill', ['/F', '/PID', process.ppid])
+    }
+    fs.appendFileSync('a.txt', `${t}----${path.resolve('.')}---\n`)
+}, 1000);
+```
+### 将stdio重定向到文件
+```js
+var child_process = require('child_process');
+var fs = require('fs');
+
+var out = fs.openSync('./out.log', 'a');
+var err = fs.openSync('./err.log', 'a');
+
+var child = child_process.spawn('node', ['child.js'], {
+    detached: true,
+    stdio: ['ignore', out, err]
+});
+
+child.unref();
+```
