@@ -14,7 +14,7 @@ rootDirs.forEach(navText => {
   var moduleDirs = fs.readdirSync(absNavPath)
 
   moduleDirs.forEach(m => {
-    
+
     var obj = {
       title: m,
       collapsable: true,
@@ -28,9 +28,10 @@ rootDirs.forEach(navText => {
 
     files.forEach(_ => {
       if (fs.statSync(path.resolve(subPath, _)).isDirectory()) return
-      var name = _.slice(0, _.indexOf('.'))
+      var name = _.slice(0, _.lastIndexOf('.'))
       obj.children.push([m + '/' + name, name])
     })
+    obj.children.sort((a, b) => (parseInt(a[1]) - parseInt(b[1])) || 1)
     // console.log(obj)
 
   })
