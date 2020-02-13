@@ -3,7 +3,7 @@
 ```bash
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 ```
-2. buster/etc/apt/sources.list文件
+2. buster /etc/apt/sources.list文件
 
 ```
 deb http://mirrors.163.com/debian/ buster main non-free contrib
