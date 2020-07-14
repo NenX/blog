@@ -1,11 +1,16 @@
 # as exit.s -o exit.o
 # ld exit.o -o exit
-.section .data
-.section .text
-.globl _start
 
-_start:
-    movl $1, %eax
-    movl $0, %ebx
 
-    int $0x80
+.globl main
+.type main, @function
+.equ GG,1235
+main:
+    pushq %rbp
+    movq %rsp,%rbp
+
+    movl $GG,%edi
+    call print_number
+    leave
+    ret
+
