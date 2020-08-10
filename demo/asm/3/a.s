@@ -17,60 +17,60 @@
 .equ END_OF_FILE,0
 .equ NUMBER_ARGUMENTS,2
 
-.section .bss
-
 .equ BUFFER_SIZE,500
-.lcomn BUFFER_DATA,BUFFER_SIZE
+
+.section .bss
+.lcomm BUFFER_DATA,BUFFER_SIZE
 
 .section .text
 # 栈位置
-.equ ST_SIZE_RESERVE,16
-.equ ST_FD_IN,-8
-.equ ST_FD_OUT,-16
+.equ ST_SIZE_RESERVE,8
+.equ ST_FD_IN,-4
+.equ ST_FD_OUT,-8
 .equ ST_ARGC,0
-.equ ST_ARGV_0,8
-.equ ST_ARGV_1,16
-.equ ST_ARGV_2,24
+.equ ST_ARGV_0,4
+.equ ST_ARGV_1,8
+.equ ST_ARGV_2,12
 
 .globl main
 .type main, @function
 
 main:
-movq %rsp,%rbp
-subq $ST_SIZE_RESERVE,%rsp
+movl %esp,%ebp
+subl $ST_SIZE_RESERVE,%esp
 
 open_files:
 open_fd_in:
 
-movq $SYS_OPEN,%rax
-movq $ST_ARGV_1(%rbp),%rbx
-movq $O_RDONLY, %rcx
-movq $0666, %rdx
+movl $SYS_OPEN,%eax
+movl ST_ARGV_1(%ebp),%ebx
+movl $O_RDONLY, %ecx
+movl $0666, %edx
 int $LINUX_SYSCALL
 
 store_fd_in:
-movq %rax,$ST_FD_IN(%rbp)
+movl %eax,ST_FD_IN(%ebp)
 
 open_fd_out:
-movq $SYS_OPEN, %rax
-movq $ST_ARGV_2, %rbx
-movq $O_CREAT_WRONLY_TRUNC, %rcx
-movq $0666,%rdx
+movl $SYS_OPEN, %eax
+movl $ST_ARGV_2, %ebx
+movl $O_CREAT_WRONLY_TRUNC, %ecx
+movl $0666,%edx
 int $LINUX_SYSCALL
 
 store_fd_out:
-movq %rax,$ST_FD_OUT(%rbp)
+movl %eax,ST_FD_OUT(%ebp)
 
 # 主循环
 read_loop_begin:
 
-movq $SYS_READ,%rax
-movq $ST_FD_IN(%rbp),%rbx
-movq $BUFFER_DATA,%rcx
-movq $BUFFER_SIZE,%rdx
-int LINUX_SYSCALL
+movl $SYS_READ,%eax
+movl ST_FD_IN(%ebp),%ebx
+movl $BUFFER_DATA,%ecx
+movl $BUFFER_SIZE,%edx
+int $LINUX_SYSCALL
 
-cmpq $END_OF_FILE,%rax
+cmpl $END_OF_FILE,%eax
 jle end_loop
 
 end_loop:
