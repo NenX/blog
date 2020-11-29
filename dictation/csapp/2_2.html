@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2.2 Integer Representations | 无味咸鱼</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    
+    <meta name="description" content="Python linux c++ nodejs git 前端">
+    <link rel="preload" href="/blog/assets/css/0.styles.5be86d74.css" as="style"><link rel="preload" href="/blog/assets/js/app.d632149a.js" as="script"><link rel="preload" href="/blog/assets/js/2.57d6b41d.js" as="script"><link rel="preload" href="/blog/assets/js/30.b206a41d.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.c14a962d.js"><link rel="prefetch" href="/blog/assets/js/100.1cd56744.js"><link rel="prefetch" href="/blog/assets/js/101.a9aa44e2.js"><link rel="prefetch" href="/blog/assets/js/102.c645984d.js"><link rel="prefetch" href="/blog/assets/js/103.9ffb7658.js"><link rel="prefetch" href="/blog/assets/js/104.f7fd3dd0.js"><link rel="prefetch" href="/blog/assets/js/105.75006034.js"><link rel="prefetch" href="/blog/assets/js/106.63423224.js"><link rel="prefetch" href="/blog/assets/js/107.8c14363a.js"><link rel="prefetch" href="/blog/assets/js/108.2ddbcb02.js"><link rel="prefetch" href="/blog/assets/js/11.3d548b61.js"><link rel="prefetch" href="/blog/assets/js/12.9d2c4f8a.js"><link rel="prefetch" href="/blog/assets/js/13.a9b409d7.js"><link rel="prefetch" href="/blog/assets/js/14.3a02f7ba.js"><link rel="prefetch" href="/blog/assets/js/15.6a994d14.js"><link rel="prefetch" href="/blog/assets/js/16.9233eade.js"><link rel="prefetch" href="/blog/assets/js/17.4cfc67cf.js"><link rel="prefetch" href="/blog/assets/js/18.dfbd3923.js"><link rel="prefetch" href="/blog/assets/js/19.0412ef20.js"><link rel="prefetch" href="/blog/assets/js/20.2df1e597.js"><link rel="prefetch" href="/blog/assets/js/21.d97aa624.js"><link rel="prefetch" href="/blog/assets/js/22.0a983704.js"><link rel="prefetch" href="/blog/assets/js/23.6003bdaa.js"><link rel="prefetch" href="/blog/assets/js/24.a46fad1d.js"><link rel="prefetch" href="/blog/assets/js/25.5922eb09.js"><link rel="prefetch" href="/blog/assets/js/26.0644938c.js"><link rel="prefetch" href="/blog/assets/js/27.06d33185.js"><link rel="prefetch" href="/blog/assets/js/28.f2220207.js"><link rel="prefetch" href="/blog/assets/js/29.58089910.js"><link rel="prefetch" href="/blog/assets/js/3.a81e591c.js"><link rel="prefetch" href="/blog/assets/js/31.55f76152.js"><link rel="prefetch" href="/blog/assets/js/32.ab6a81d4.js"><link rel="prefetch" href="/blog/assets/js/33.47cd718e.js"><link rel="prefetch" href="/blog/assets/js/34.d358307a.js"><link rel="prefetch" href="/blog/assets/js/35.2e063ad0.js"><link rel="prefetch" href="/blog/assets/js/36.a1b0c8d4.js"><link rel="prefetch" href="/blog/assets/js/37.295ab3a3.js"><link rel="prefetch" href="/blog/assets/js/38.523bd102.js"><link rel="prefetch" href="/blog/assets/js/39.4accf413.js"><link rel="prefetch" href="/blog/assets/js/4.3086808d.js"><link rel="prefetch" href="/blog/assets/js/40.8fc1ef90.js"><link rel="prefetch" href="/blog/assets/js/41.f4ab864c.js"><link rel="prefetch" href="/blog/assets/js/42.f7badf16.js"><link rel="prefetch" href="/blog/assets/js/43.c7431b80.js"><link rel="prefetch" href="/blog/assets/js/44.9f3dfe4f.js"><link rel="prefetch" href="/blog/assets/js/45.bd001a18.js"><link rel="prefetch" href="/blog/assets/js/46.75789747.js"><link rel="prefetch" href="/blog/assets/js/47.b2ded0c6.js"><link rel="prefetch" href="/blog/assets/js/48.b0e921d0.js"><link rel="prefetch" href="/blog/assets/js/49.2a5955e8.js"><link rel="prefetch" href="/blog/assets/js/5.69539770.js"><link rel="prefetch" href="/blog/assets/js/50.6c29e98b.js"><link rel="prefetch" href="/blog/assets/js/51.88dff119.js"><link rel="prefetch" href="/blog/assets/js/52.0afcc8e5.js"><link rel="prefetch" href="/blog/assets/js/53.134a6419.js"><link rel="prefetch" href="/blog/assets/js/54.b8563d36.js"><link rel="prefetch" href="/blog/assets/js/55.8afa0dc5.js"><link rel="prefetch" href="/blog/assets/js/56.2b5ca77d.js"><link rel="prefetch" href="/blog/assets/js/57.225bf43f.js"><link rel="prefetch" href="/blog/assets/js/58.f834f952.js"><link rel="prefetch" href="/blog/assets/js/59.e3059bac.js"><link rel="prefetch" href="/blog/assets/js/6.45168e70.js"><link rel="prefetch" href="/blog/assets/js/60.1658c77b.js"><link rel="prefetch" href="/blog/assets/js/61.b432c203.js"><link rel="prefetch" href="/blog/assets/js/62.11e44c8e.js"><link rel="prefetch" href="/blog/assets/js/63.8d1878b1.js"><link rel="prefetch" href="/blog/assets/js/64.2cdd2ad3.js"><link rel="prefetch" href="/blog/assets/js/65.a4bfabc0.js"><link rel="prefetch" href="/blog/assets/js/66.b3184942.js"><link rel="prefetch" href="/blog/assets/js/67.74ad9981.js"><link rel="prefetch" href="/blog/assets/js/68.590fe076.js"><link rel="prefetch" href="/blog/assets/js/69.fca7907f.js"><link rel="prefetch" href="/blog/assets/js/7.f15ecd2a.js"><link rel="prefetch" href="/blog/assets/js/70.a3418552.js"><link rel="prefetch" href="/blog/assets/js/71.e7a530d9.js"><link rel="prefetch" href="/blog/assets/js/72.dc5c9206.js"><link rel="prefetch" href="/blog/assets/js/73.09f5d29e.js"><link rel="prefetch" href="/blog/assets/js/74.639591a1.js"><link rel="prefetch" href="/blog/assets/js/75.a0901b16.js"><link rel="prefetch" href="/blog/assets/js/76.2a01b2d3.js"><link rel="prefetch" href="/blog/assets/js/77.7ec2a4f4.js"><link rel="prefetch" href="/blog/assets/js/78.e6ef17fa.js"><link rel="prefetch" href="/blog/assets/js/79.536f3986.js"><link rel="prefetch" href="/blog/assets/js/8.489fa7fe.js"><link rel="prefetch" href="/blog/assets/js/80.73ac36a2.js"><link rel="prefetch" href="/blog/assets/js/81.561dad7f.js"><link rel="prefetch" href="/blog/assets/js/82.90684c17.js"><link rel="prefetch" href="/blog/assets/js/83.348ac9ff.js"><link rel="prefetch" href="/blog/assets/js/84.e69458a5.js"><link rel="prefetch" href="/blog/assets/js/85.07c5ba72.js"><link rel="prefetch" href="/blog/assets/js/86.716ad12a.js"><link rel="prefetch" href="/blog/assets/js/87.2edaa508.js"><link rel="prefetch" href="/blog/assets/js/88.00b2592e.js"><link rel="prefetch" href="/blog/assets/js/89.e1dcd8bc.js"><link rel="prefetch" href="/blog/assets/js/9.9e1f96c4.js"><link rel="prefetch" href="/blog/assets/js/90.37680ca0.js"><link rel="prefetch" href="/blog/assets/js/91.542b2403.js"><link rel="prefetch" href="/blog/assets/js/92.c22dfd64.js"><link rel="prefetch" href="/blog/assets/js/93.39be434e.js"><link rel="prefetch" href="/blog/assets/js/94.e855dfe7.js"><link rel="prefetch" href="/blog/assets/js/95.c49772f0.js"><link rel="prefetch" href="/blog/assets/js/96.b52f2418.js"><link rel="prefetch" href="/blog/assets/js/97.350150a7.js"><link rel="prefetch" href="/blog/assets/js/98.8416a182.js"><link rel="prefetch" href="/blog/assets/js/99.5947b522.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.5be86d74.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">无味咸鱼</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/dictation/" class="nav-link router-link-active">
+  dictation
+</a></div><div class="nav-item"><a href="/blog/fe/" class="nav-link">
+  fe
+</a></div><div class="nav-item"><a href="/blog/learning/" class="nav-link">
+  learning
+</a></div><div class="nav-item"><a href="/blog/netWork/" class="nav-link">
+  netWork
+</a></div><div class="nav-item"><a href="/blog/基础/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/blog/工具/" class="nav-link">
+  工具
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/dictation/" class="nav-link router-link-active">
+  dictation
+</a></div><div class="nav-item"><a href="/blog/fe/" class="nav-link">
+  fe
+</a></div><div class="nav-item"><a href="/blog/learning/" class="nav-link">
+  learning
+</a></div><div class="nav-item"><a href="/blog/netWork/" class="nav-link">
+  netWork
+</a></div><div class="nav-item"><a href="/blog/基础/" class="nav-link">
+  基础
+</a></div><div class="nav-item"><a href="/blog/工具/" class="nav-link">
+  工具
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>csapp</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/dictation/csapp/1_1.html" class="sidebar-link">1_1</a></li><li><a href="/blog/dictation/csapp/1_10.html" class="sidebar-link">1_10</a></li><li><a href="/blog/dictation/csapp/1_2.html" class="sidebar-link">1_2</a></li><li><a href="/blog/dictation/csapp/1_3.html" class="sidebar-link">1_3</a></li><li><a href="/blog/dictation/csapp/1_4.html" class="sidebar-link">1_4</a></li><li><a href="/blog/dictation/csapp/1_5.html" class="sidebar-link">1_5</a></li><li><a href="/blog/dictation/csapp/1_6.html" class="sidebar-link">1_6</a></li><li><a href="/blog/dictation/csapp/1_7.html" class="sidebar-link">1_7</a></li><li><a href="/blog/dictation/csapp/1_8.html" class="sidebar-link">1_8</a></li><li><a href="/blog/dictation/csapp/1_9.html" class="sidebar-link">1_9</a></li><li><a href="/blog/dictation/csapp/2_1 copy.html" class="sidebar-link">2_1 copy</a></li><li><a href="/blog/dictation/csapp/2_1.html" class="sidebar-link">2_1</a></li><li><a href="/blog/dictation/csapp/2_2.html" aria-current="page" class="active sidebar-link">2_2</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/dictation/csapp/2_2.html#_2-2-1-integral-data-types" class="sidebar-link">2.2.1 Integral Data Types</a></li><li class="sidebar-sub-header"><a href="/blog/dictation/csapp/2_2.html#_2-2-2-unsigned-encodings" class="sidebar-link">2.2.2 Unsigned Encodings</a></li><li class="sidebar-sub-header"><a href="/blog/dictation/csapp/2_2.html#_2-2-3-two-s-complement-encodings" class="sidebar-link">2.2.3 Two’s-Complement Encodings</a></li><li class="sidebar-sub-header"><a href="/blog/dictation/csapp/2_2.html#_2-2-4-conversions-between-signed-and-unsigned" class="sidebar-link">2.2.4 Conversions between Signed and Unsigned</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>README.md</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>sicp</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_2-2-integer-representations"><a href="#_2-2-integer-representations" class="header-anchor">#</a> 2.2 Integer Representations</h1> <p>In this section, we describe two different ways bits can be used to encode integers—one that can only represent nonnegative numbers, and one that can represent negative, zero, and positive numbers. We will see later that they are strongly related both in their mathematical properties and their machine-level implementations. We also investigate the effect of expanding or shrinking an encoded integer to fit a representation with a different length.</p> <table><thead><tr><th>Symbol</th> <th>Type</th> <th>Meaning</th></tr></thead> <tbody><tr><td>B2T<sub>w</sub></td> <td>Function</td> <td>Binary to two’s complement</td></tr> <tr><td>B2U<sub>w</sub></td> <td>Function</td> <td>Binary to unsigned</td></tr> <tr><td>U2B<sub>w</sub></td> <td>Function</td> <td>Unsigned to binary</td></tr> <tr><td>U2T<sub>w</sub></td> <td>Function</td> <td>Unsigned to two’s complement</td></tr> <tr><td>T2B<sub>w</sub></td> <td>Function</td> <td>Two’s complement to binary</td></tr> <tr><td>T2U<sub>w</sub></td> <td>Function</td> <td>Two’s complement to unsigned</td></tr> <tr><td>TMin<sub>w</sub></td> <td>Constant</td> <td>Minimum two’s-complement value</td></tr> <tr><td>TMax<sub>w</sub></td> <td>Constant</td> <td>Maximum two’s-complement value</td></tr> <tr><td>UMax<sub>w</sub></td> <td>Constant</td> <td>Maximum unsigned value</td></tr> <tr><td>+<sup>t</sup><sub>w</sub></td> <td>Operation</td> <td>Two’s-complement addition</td></tr> <tr><td>+<sup>u</sup><sub>w</sub></td> <td>Operation</td> <td>Unsigned addition</td></tr> <tr><td>*<sup>t</sup><sub>w</sub></td> <td>Operation</td> <td>Two’s-complement multiplication</td></tr> <tr><td>*<sup>u</sup><sub>w</sub></td> <td>Operation</td> <td>Unsigned multiplication</td></tr> <tr><td>-<sup>t</sup><sub>w</sub></td> <td>Operation</td> <td>Two’s-complement negation</td></tr> <tr><td>-<sup>u</sup><sub>w</sub></td> <td>Operation</td> <td>Unsigned negation</td></tr></tbody></table> <p>terminology will be introduced over the course of the presentation. The figure is
+included here as a reference.</p> <h2 id="_2-2-1-integral-data-types"><a href="#_2-2-1-integral-data-types" class="header-anchor">#</a> 2.2.1 Integral Data Types</h2> <p>C supports a variety of integral data types—ones that represent finite ranges of
+integers. These are shown in Figures 2.9 and 2.10, along with the ranges of values
+they can have for “typical” 32- and 64-bit programs. Each type can specify a
+size with keyword char, short, long, as well as an indication of whether the
+represented numbers are all nonnegative (declared as unsigned), or possibly
+negative (the default.) As we saw in Figure 2.3, the number of bytes allocated for
+the different sizes varies according to whether the program is compilfed for 32 or
+64 bits. Based on the byte allocations, the different sizes allow diferent ranges of
+values to be represented. The only machine-dependent range indicated is for size
+designator long. Most 64-bit programs use an 8-byte representation, giving a much
+wider range of values than the 4-byte representation used with 32-bit programs.</p> <p>The C standards define minimum ranges of values that each data type must
+be able to represent. As shown in Figure 2.11, their ranges are the same or smaller
+than the typical implementations shown in Figures 2.9 and 2.10. In particular,
+with the exception of the fixed-size data types, we see that they require only a symmetric range of positive and negative numbers. We also see that data type int
+could be implemented with 2-byte numbers, although this is mostly a throwback
+to the days of 16-bit machines. We also see that size long can be implemented
+with 4-byte numbers, and it typically is for 32-bit programs. The fixed-size data
+types guarantee that the ranges of values will be exactly those given by the typical
+numbers of Figure 2.9, including the asymmetry between negative and positive.</p> <h2 id="_2-2-2-unsigned-encodings"><a href="#_2-2-2-unsigned-encodings" class="header-anchor">#</a> 2.2.2 Unsigned Encodings</h2> <p>Let us consider an integer data type of w bits. We write a bit vector as either x, to
+denote the entire vector, or as [x<sub>w−1</sub>, x<sub>w−2</sub>,...,x<sub>0</sub>] to denote the individual bits
+within the vector. Treating x as a number written in binary notation, we obtain the
+unsigned interpretation of x. In this encoding, each bit x<sub>i</sub> has value 0 or 1, with the
+latter case indicating that value 2<sup>i</sup> should be included as part of the numeric value.
+We can express this interpretation as a function B2U<sub>w</sub> (for “binary to unsigned,”
+length w):</p> <p>In this equation, the notation .
+= means that the left-hand side is defined to be
+equal to the right-hand side. The function B2Uw maps strings of zeros and ones
+of length w to nonnegative integers. As examples, Figure 2.12 shows the mapping,
+given by B2U, from bit vectors to integers for the following cases:</p> <blockquote><p><code>B2U4([0001])</code> = 0 . 2<sup>3</sup> + 0 . 2<sup>2</sup> + 0 . 2<sup>1</sup> + 1 . 2<sup>0</sup> = 0 + 0 + 0 + 1 = 1</p> <p><code>B2U4([0101])</code> = 0 . 2<sup>3</sup> + 1 . 2<sup>2</sup> + 0 . 2<sup>1</sup> + 1 . 2<sup>0</sup> = 0 + 4 + 0 + 1 = 5</p> <p><code>B2U4([1011])</code> = 1 . 2<sup>3</sup> + 0 . 2<sup>2</sup> + 1 . 2<sup>1</sup> + 1 . 2<sup>0</sup> = 8 + 0 + 2 + 1 = 11</p> <p><code>B2U4([1111])</code> = 1 . 2<sup>3</sup> + 1 . 2<sup>2</sup> + 1 . 2<sup>1</sup> + 1 . 2<sup>0</sup> = 8 + 4 + 2 + 1 = 15</p></blockquote> <p>In the figure, we represent each bit position i by a rightward-pointing blue bar of
+length 2<sup>i</sup>. The numeric value associated with a bit vector then equals the sum of
+the lengths of the bars for which the corresponding bit values are 1.</p> <p>Let us consider the range of values that can be represented using w bits. The
+least value is given by bit vector [00 ... 0] having integer value 0, and the greatest
+value is given by bit vector [11 ... 1] having integer value UMax<sub>w</sub> = 2<sup>w</sup> − 1. Using the 4-bit case as an example,
+we have UMax<sub>4</sub> = B2U<sub>4</sub>([1111]) = 24 − 1= 15. Thus, the function B2Uw can be defined as a mapping B2U<sub>w</sub>:{0, 1}w →{0,..., UMaxw}.</p> <p>The unsigned binary representation has the important property that every
+number between 0 and 2<sup>w</sup> − 1has a unique encoding as a w-bit value. For example, there is only one representation of decimal value 11 as an unsigned 4-bit number—
+namely, [1011]. We highlight this as a mathematical principle, which we first state
+and then explain.</p> <div class="custom-block tip"><p class="custom-block-title">principle</p> <p>Uniqueness of unsigned encoding: Function B2U<sub>w</sub> is a bijection.</p></div> <p>The mathematical term bijection refers to a function f that goes two ways:
+it maps a value x to a value y where y = f (x), but it can also operate in reverse,
+since for every y, there is a unique value x such that f (x) = y. This is given by
+the inverse function f −1, where, for our example, x = f −1(y). The function B2U<sub>w</sub>
+maps each bit vector of length w to a unique number between 0 and 2<sup>w</sup> − 1, and
+it has an inverse, which we call U2B<sub>w</sub> (for “unsigned to binary”), that maps each
+number in the range 0 to 2<sup>w</sup> − 1 to a unique pattern of w bits.</p> <h2 id="_2-2-3-two-s-complement-encodings"><a href="#_2-2-3-two-s-complement-encodings" class="header-anchor">#</a> 2.2.3 Two’s-Complement Encodings</h2> <p>For many applications, we wish to represent negative values as well. The most common computer representation of signed numbers is known as two’s-complement
+form. This is defined by interpreting the most significant bit of the word to have
+negative weight. We express this interpretation as a function B2T<sub>w</sub> (for “binary
+to two’s complement” length w):</p> <div class="custom-block tip"><p class="custom-block-title">principle Definition of two’s-complement encoding</p> <p>For vector x = [x<sub>w−1</sub>, x<sub>w−2</sub>,...,x0]:</p></div> <p>The most significant bit x<sub>w−1</sub> is also called the sign bit. Its “weight” is −2<sup>w−1</sup>,
+the negation of its weight in an unsigned representation. When the sign bit is set
+to 1, the represented value is negative, and when set to 0, the value is nonnegative.
+As examples, Figure 2.13 shows the mapping, given by B2T, from bit vectors to
+integers for the following cases:</p> <blockquote><p><code>B2T4([0001])</code> = −0 . 2<sup>3</sup> + 0 . 2<sup>2</sup> + 0 . 2<sup>1</sup> + 1 . 2<sup>0</sup> = 0 + 0 + 0 + 1 = 1</p> <p><code>B2T4([0101])</code> = −0 . 2<sup>3</sup> + 1 . 2<sup>2</sup> + 0 . 2<sup>1</sup> + 1 . 2<sup>0</sup> = 0 + 4 + 0 + 1 = 5</p> <p><code>B2T4([1011])</code> = −1 . 2<sup>3</sup> + 0 . 2<sup>2</sup> + 1 . 2<sup>1</sup> + 1 . 2<sup>0</sup> = −8 + 0 + 2 + 1 = −5</p> <p><code>B2T4([1111])</code> = −1 . 2<sup>3</sup> + 1 . 2<sup>2</sup> + 1 . 2<sup>1</sup> + 1 . 2<sup>0</sup> = −8 + 4 + 2 + 1 = −1</p></blockquote> <p>In the figure, we indicate that the sign bit has negative weight by showing it as
+a leftward-pointing gray bar. The numeric value associated with a bit vector is
+then given by the combination of the possible leftward-pointing gray bar and the
+rightward-pointing blue bars.</p> <p>We see that the bit patterns are identical for Figures 2.12 and 2.13 (as well as
+for Equations 2.2 and 2.4), but the values differ when the most significant bit is 1,
+since in one case it has weight +8, and in the other case it has weight −8.</p> <p>Let us consider the range of values that can be represented as a w-bit two’scomplement number. The least representable value is given by bit vector [10 ... 0]
+(set the bit with negative weight but clear all others), having integer value
+TMin<sub>w−2</sub> = −2<sup>w−1</sup>. The greatest value is given by bit vector [01 ... 1] (clear the bit
+with negative weight but set all others), having integer value TMax<sub>w</sub>=2<sup>w−1</sup> − 1. Using the 4-bit case as an example,
+we have TMin<sub>4</sub> = B2T<sub>4</sub>([1000]) = −2<sup>3</sup> = −8 and TMax4 = B2T4([0111]) = 2<sup>3</sup> -1 = 7.</p> <div class="custom-block tip"><p class="custom-block-title">principle</p> <p>Uniqueness of signed encoding: Function B2T<sub>w</sub> is a bijection.</p></div> <p>We define function T2B<sub>w</sub> (for “two’s complement to binary”) to be the inverse
+of B2T<sub>w</sub>. That is, for a number x, such that TMin<sub>w</sub> ≤ x ≤ TMax<sub>w</sub>, T2B<sub>w</sub>(x) is the (unique) w-bit pattern that encodes x.</p> <p>Figure 2.14 shows the bit patterns and numeric values for several important
+numbers for different word sizes. The first three give the ranges of representable
+integers in terms of the values of UMaxw, TMinw, and TMaxw. We will refer
+to these three special values often in the ensuing discussion. We will drop the
+subscript w and refer to the values UMax, TMin, andTMax when w can be inferred
+from context or is not central to the discussion.</p> <p>A few points are worth highlighting about these numbers. First, as observed
+in Figures 2.9 and 2.10, the two’s-complement range is asymmetric: |TMin| =
+|TMax| + 1; that is, there is no positive counterpart to TMin. As we shall see, this
+leads to some peculiar properties of two’s-complement arithmetic and can be the
+source of subtle program bugs. This asymmetry arises because half the bit patterns
+(those with the sign bit set to 1) represent negative numbers, while half (those
+with the sign bit set to 0) represent nonnegative numbers. Since 0 is nonnegative,
+this means that it can represent one less positive number than negative. Second,
+the maximum unsigned value is just over twice the maximum two’s-complement
+value: UMax = 2TMax + 1. All of the bit patterns that denote negative numbers in
+two’s-complement notation become positive values in an unsigned representation.Figure 2.14 also shows the representations of constants −1 and 0. Note that −1
+has the same bit representation as UMax—a string of all ones. Numeric value 0 is
+represented as a string of all zeros in both representations.</p> <p>The C standards do not require signed integers to be represented in two’scomplement form, but nearly all machines do so. Programmers who are concerned
+with maximizing portability across all possible machines should not assume any
+particular range of representable values, beyond the ranges indicated in Figure
+2.11, nor should they assume any particular representation of signed numbers.
+On the other hand, many programs are written assuming a two’s-complement
+representation of signed numbers, and the “typical” ranges shown in Figures 2.9
+and 2.10, and these programs are portable across a broad range of machines
+and compilers. The file &lt;limits.h&gt; in the C library defines a set of constants delimiting the ranges of the different integer data types for the particular machine
+on which the compiler is running. For example, it defines constants INT_MAX, INT_
+MIN, and UINT_MAX describing the ranges of signed and unsigned integers. For a
+two’s-complement machine in which data type int has w bits, these constants
+correspond to the values of TMaxw, TMinw, and UMaxw.</p> <p>The Java standard is quite specific about integer data type ranges and representations. It requires a two’s-complement representation with the exact ranges
+shown for the 64-bit case (Figure 2.10). In Java, the single-byte data type is called
+byte instead of char. These detailed requirements are intended to enable Java
+programs to behave identically regardless of the machines or operating systems
+running them.</p> <p>When run on a big-endian machine, this code prints 30 39 and cf c7, indicating that x has hexadecimal representation 0x3039, while mx has hexadecimal representation 0xCFC7. Expanding these into binary, we get bit patterns
+[0011000000111001] for x and [1100111111000111] for mx. As Figure 2.15 shows,
+Equation 2.3 yields values 12,345 and −12,345 for these two bit patterns.</p> <h2 id="_2-2-4-conversions-between-signed-and-unsigned"><a href="#_2-2-4-conversions-between-signed-and-unsigned" class="header-anchor">#</a> 2.2.4 Conversions between Signed and Unsigned</h2> <p>C allows casting between different numeric data types. For example, suppose
+variable x is declared as int and u as unsigned. The expression <code>(unsigned) x</code>
+converts the value of x to an unsigned value, and <code>(int) u</code> converts the value of u
+to a signed integer. What should be the effect of casting signed value to unsigned,
+or vice versa? From a mathematical perspective, one can imagine several different
+conventions. Clearly, we want to preserve any value that can be represented in
+both forms. On the other hand, converting a negative value to unsigned might yield
+zero. Converting an unsigned value that is too large to be represented in two’scomplement form might yield TMax. For most implementations of C, however,
+the answer to this question is based on a bit-level perspective, rather than on a
+numeric one.</p> <p>For example, consider the following code:</p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">short</span> <span class="token keyword">int</span> v <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">12345</span><span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">short</span> uv <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">short</span><span class="token punctuation">)</span> v<span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;v = %d, uv = %u\n&quot;</span><span class="token punctuation">,</span> v<span class="token punctuation">,</span> uv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>When run on a two’s-complement machine, it generates the following output:<code>v = -12345, uv = 53191</code></p> <p>What we see here is that the effect of casting is to keep the bit values identical
+but change how these bits are interpreted. We saw in Figure 2.15 that the 16-bit
+two’s-complement representation of −12,345 is identical to the 16-bit unsigned
+representation of 53,191. Casting from short to unsigned short changed the
+numeric value, but not the bit representation. Similarly, consider the following code:</p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">unsigned</span> u <span class="token operator">=</span> <span class="token number">4294967295u</span><span class="token punctuation">;</span> <span class="token comment">/* UMax */</span>
+<span class="token keyword">int</span> tu <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> u<span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;u = %u, tu = %d\n&quot;</span><span class="token punctuation">,</span> u<span class="token punctuation">,</span> tu<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>When run on a two’s-complement machine, it generates the following output: <code>u = 4294967295, tu = -1</code></p> <p>We can see from Figure 2.14 that, for a 32-bit word size, the bit patterns representing 4,294,967,295 (UMax32) in unsigned form and −1 in two’s-complement form
+are identical. In casting from unsigned to int, the underlying bit representation stays the same.</p> <p>This is a general rule for how most C implementations handle conversions
+between signed and unsigned numbers with the same word size—the numeric
+values might change, but the bit patterns do not. Let us capture this idea in
+a more mathematical form. We defined functions U2Bw and T2Bw that map
+numbers to their bit representations in either unsigned or two’s-complement form.
+That is, given an integer x in the range 0 ≤ x &lt; UMaxw, the function U2Bw(x)
+gives the unique w-bit unsigned representation of x. Similarly, when x is in the
+range TMinw ≤ x ≤ TMaxw, the function T2Bw(x) gives the unique w-bit two’scomplement representation of x.</p> <p>Now define the function T2Uw as T2Uw(x) = B2Uw(T2Bw(x)). This function
+takes a number between TMinw and TMaxw and yields a number between 0 and
+UMaxw, where the two numbers have identical bit representations, except that
+the argument has a two’s-complement representation while the result is unsigned.
+Similarly, for x between 0 and UMaxw, the function U2Tw, defined as U2Tw(x) = B2Tw(U2Bw(x)), yields the number having the same two’s-complement representation as the unsigned representation of x.</p> <p>Pursuing our earlier examples, we see from Figure 2.15 that T2U16(−12,345) = 53,191, and that U2T16(53,191) = −12,345. That is, the 16-bit pattern written in
+hexadecimal as 0xCFC7 is both the two’s-complement representation of −12,345 and the unsigned representation of 53,191. Note also that 12,345 + 53,191 = 65,536 = 2<sup>16</sup>. This property generalizes to a relationship between the two numeric values (two’s complement and unsigned) represented by a given bit pattern. Similarly, from Figure 2.14, we see that T2U32(−1) = 4,294,967,295, and U2T32(4,294,967,295) = −1. That is, UMax has the same bit representation in unsigned form as does−1 in two’s-complement form. We can also see the relationship between these two numbers: 1 + UMaxw = 2w.</p> <p>We see, then, that function T2U describes the conversion of a two’scomplement number to its unsigned counterpart, while U2T converts in the opposite direction. These describe  the effect of casting between these data types in most C implementations.</p> <div class="custom-block tip"><p class="custom-block-title">principle: Conversion from two’s complement to unsigned</p> <p>For x such that TMinw ≤ x ≤ TMaxw: T2U<sub>w</sub>(x) = x &gt;=0 ? (x + 2<sup>w</sup>):(x)</p></div> <div class="custom-block tip"><p class="custom-block-title">derivation: Conversion from two’s complement to unsigned</p> <p>Comparing Equations 2.1 and 2.3, we can see that for bit pattern x, if we compute
+the difference B2Uw(x) − B2Tw(x) , the weighted sums for bits from 0 to w − 2 will
+cancel each other, leaving a value B2Uw(x) − B2Tw(x) = xw−1(2w−1 − −2w−1) =
+xw−12w. This gives a relationship B2Uw(x) = B2Tw(x) + xw−12w. We therefore have:<code>B2Uw(T2Bw(x)) = T2Uw(x) = x + xw−12w</code></p></div> <p>In a two’s-complement representation of x, bit xw−1 determines whether or not x
+is negative, giving the two cases of Equation 2.5</p> <p>As examples, Figure 2.16 compares how functions B2U and B2T assign values
+to bit patterns for w = 4. For the two’s-complement case, the most significant bit
+serves as the sign bit, which we diagram as a leftward-pointing gray bar. For the
+unsigned case, this bit has positive weight, which we show as a rightward-pointing
+black bar. In going from two’s complement to unsigned, the most significant bit
+changes its weight from −8 to +8. As a consequence, the values that are negative in a two’s-complement representation increase by 2<sup>4</sup> = 16 with an unsigned
+representation. Thus, −5 becomes +11, and −1 becomes +15.</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">8/19/2020, 6:19:58 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/dictation/csapp/2_1.html" class="prev">
+        2_1
+      </a></span> <span class="next"><a href="/blog/dictation/sicp/1_1.html">
+        1_1
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.d632149a.js" defer></script><script src="/blog/assets/js/2.57d6b41d.js" defer></script><script src="/blog/assets/js/30.b206a41d.js" defer></script>
+  </body>
+</html>
