@@ -2,23 +2,35 @@
 #include "a.h"
 #include "stdio.h"
 
-void test_show_bytes(int val)
+extern int i;
+// void test_show_bytes(int val)
+// {
+//     int ival = val;
+//     float fval = (float)ival;
+//     int *pval = &ival;
+//     show_int(ival);
+//     show_float(fval);
+//     show_pointer(pval);
+// }
+int gv = 1;
+int g00zero00 = 0;
+int ggg;
+int fn(int i)
 {
-    int ival = val;
-    float fval = (float)ival;
-    int *pval = &ival;
-    show_int(ival);
-    show_float(fval);
-    show_pointer(pval);
-}
+    static int sv = 2;
+    static int sss;
+    static int s00zero00 = 0;
 
-void main(void)
+    sv++;
+    sss++;
+    return i + 1;
+}
+int main(void)
 {
-    unsigned int i = 0;
-    while (1)
-    {
-        printf("hello %d",i++);
-        sleep(1000);
-    }
-    
+
+    int a = 123;
+    int b = fn(a);
+    show_int(i);
+    printf("abcd");
+    return b;
 }

@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "*.groovy": "gradle",
+        "*.toml": "python",
+        "*.asm": "asm",
+        "*.md": "markdown",
+        "*.list": "shellscript",
+        "*.s": "gas",
+        "good.h": "c",
+        "cstdlib": "c",
+        "cmath": "c",
+        "cstdarg": "c",
+        "cstdint": "c",
+        "cstdio": "c",
+        "type_traits": "c",
+        "limits": "c",
+        "*.tcc": "c",
+        "typeinfo": "c",
+        "stdio.h": "c"
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/demo/c"
+}
