@@ -6,6 +6,7 @@
         "*.md": "markdown",
         "*.list": "shellscript",
         "*.s": "gas",
+        "*.tsx": "typescriptreact",
         "good.h": "c",
         "cstdlib": "c",
         "cmath": "c",
@@ -16,7 +17,8 @@
         "limits": "c",
         "*.tcc": "c",
         "typeinfo": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "uio.h": "c"
     },
     "cmake.sourceDirectory": "${workspaceFolder}/demo/c"
 }
